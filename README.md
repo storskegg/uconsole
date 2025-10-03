@@ -9,6 +9,15 @@ This is my aggregation of widespread wisdom from others' experiences getting the
 - `chrony` time sync using NMEA and PPS for microsecond accuracy
 - ADS-B (1090) monitoring
 
+## Assumptions
+
+The following assumptions are made in this document, and in the shellscript:
+
+1. You are using the same (or strictly compatible) hardware setup as me (detailed below)
+2. You are using the same base image as me (also detailed below)
+
+If you're using a different base image, your mileage may vary. If you're using a different hardware setup, then you'll probably experience some speed bumps along the way (e.g. device path naming, etc.)
+
 ## My Hardware Setup
 
 - [Clockwork PI uConsole CM4](https://www.clockworkpi.com/product-page/uconsole-kit-rpi-cm4-lite) w/ 4104000 CM4 (plans to upgrade to 4108000; CM5 will require special thermal considerations, so I don't think we'll see official support any time soon)
@@ -20,8 +29,6 @@ This is my aggregation of widespread wisdom from others' experiences getting the
 ## My Software Setup
 
 ### Base Image
-
-**!! NOTE: The shellscript and notes assume the use of Rex's Bookworm image mentioned here.** If you're trying to use this with the community distro, you will probably experience problems.
 
 Rather than the stock base image for the uConsole, I've opted to use Rex's "Bookworm" distro. It comes with a lot of things already set up for SDR work, and is future-looking for official CM5 support on the uConsole.
 
