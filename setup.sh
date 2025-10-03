@@ -7,7 +7,7 @@ read -p "Press ENTER to continue, or CTRL-C to quit."
 
 export DIR_UCS="$HOME/.uc_setup"
 export DIR_UCS_GIT="$DIR_UCS/git"
-export DIR_UCS_BAK="$HOME/backups"
+export DIR_UCS_BAK="$DIR_UCS/backups"
 export DIR_UCS_FIRMWARE="$DIR_UCS_BAK/boot/firmware"
 export DIR_UCS_ETC_DEFAULT="$DIR_UCS_BAK/etc/default"
 export DIR_UCS_ETC_CHRONY="$DIR_UCS_BAK/etc/chrony"
@@ -42,10 +42,10 @@ git clone https://github.com/storskegg/uconsole.git $DIR_UCS_GIT
 [[ -f $FILE_UCS_ETC_CHRONY ]] & cp $FILE_UCS_ETC_CHRONY $DIR_UCS_ETC_CHRONY
 
 cd $DIR_UCS_GIT/fs
-cp ./boot/firmware/config.txt $FILE_UCS_FW_CFG_TXT
-cp ./etc/default/gpsd $FILE_UCS_ETC_GPSD
-cp ./etc/chrony/chrony.conf $FILE_UCS_ETC_CHRONY
-cp ./home/w4pho/.inputrc $HOME/.inputrc
+sudo cp ./boot/firmware/config.txt $FILE_UCS_FW_CFG_TXT
+sudo cp ./etc/default/gpsd $FILE_UCS_ETC_GPSD
+sudo cp ./etc/chrony/chrony.conf $FILE_UCS_ETC_CHRONY
+sudo cp ./home/w4pho/.inputrc $HOME/.inputrc
 
 # ADS-B auto-installers
 sudo bash -c "$(wget -O - https://github.com/wiedehopf/adsb-scripts/raw/master/readsb-install.sh)"
