@@ -14,6 +14,7 @@ dtoverlay=clockworkpi-uconsole
 dtoverlay=vc4-kms-v3d-pi4,cma-384
 dtparam=spi=on
 enable_uart=1
+# Performance
 over_voltage=6
 arm_freq=2000
 gpu_freq=750
@@ -35,6 +36,12 @@ dtoverlay=vc4-kms-v3d-pi5,cma-384
 dtparam=uart0
 dtparam=pciex1
 dtparam=pciex1_gen=3
+# RTC
+# disable the CM5 internal RTC
+dtparam=rtc=off
+# i2c_csi_dsi0, remap the i2c0 to GPIO38/39 on CM5
+dtoverlay=i2c-rtc,pcf85063a,i2c_csi_dsi0
+
 
 [all]
 ignore_lcd=1

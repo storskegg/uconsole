@@ -9,6 +9,8 @@ This is my aggregation of widespread wisdom from others' experiences getting the
 - `chrony` time sync using NMEA and PPS for microsecond accuracy
 - ADS-B (1090) monitoring
 
+---
+
 ## Assumptions
 
 The following assumptions are made in this document, and in the shellscript:
@@ -71,4 +73,5 @@ At some point, I may convert this to a deb package so that `apt` can do all the 
 - https://github.com/cjstoddard/Clockworkpi-uConsole/
 - https://hackergadgets.com/pages/hackergadgets-uconsole-rtl-sdr-lora-gps-rtc-usb-hub-all-in-one-extension-board-setup-guide
 - https://austinsnerdythings.com/2025/02/14/revisiting-microsecond-accurate-ntp-for-raspberry-pi-with-gps-pps-in-2025/
+- https://forum.clockworkpi.com/t/tar1090-for-uconsole-monitor-live-planes-in-your-area/17562
 
