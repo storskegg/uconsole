@@ -53,6 +53,10 @@ While I generally have little interest in Meshtastic (kind of a neat toy), I hav
 
 While I love hacking things, I have no plans to make destructive changes to the uConsole's chassis/enclosure to accommodate the CM5 module. I know a few people have carved the way on this, report (mixed) successes, etc, but for my personal uses of this device, I will wait until there's official CM5 support to make the upgrade.
 
+## TODO
+
+At some point, I may convert this to a deb package so that `apt` can do all the heavy lifting for me.
+
 ## List of References
 
 - [Bookworm Distro](https://forum.clockworkpi.com/t/bookworm-6-6-y-for-the-uconsole-and-devterm/13235)
