@@ -51,7 +51,7 @@ dtparam=audio=on
 dtoverlay=audremap,pins_12_13
 dtoverlay=dwc2,dr_mode=host
 dtparam=ant2
-dtparam=image8.img
+#dtparam=image8.img
 
 ##only edit the section of the pi you have, other section will be ignored.
 ##if you have a devterm uncomment devterm and comment out entries with uconsole.
