@@ -1,0 +1,9 @@
+#!/bin/bash
+
+DEVICE=/dev/ttyS0
+
+# Turn off all UBX output (binary) and enable standard NMEA sentences
+printf "\xB5\x62\x06\x01\x08\x00\xF0\x00\x01\x00\x01\x00\x00\x00\xFA\x0B" > $DEVICE   # disable UBX NAV-PVT
+printf "\xB5\x62\x06\x01\x08\x00\xF0\x01\x01\x00\x01\x00\x00\x00\xFB\x0B" > $DEVICE   # enable GGA
+printf "\xB5\x62\x06\x01\x08\x00\xF0\x02\x01\x00\x01\x00\x00\x00\xFC\x0B" > $DEVICE   # enable RMC
+# (Add more F0 xx messages for other NMEA types you need)
