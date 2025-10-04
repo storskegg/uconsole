@@ -56,6 +56,16 @@ Some of what I do in the field requires accurate time. I love that the expansion
 3. Z
 4. Time
 
+### `gpsd` and the Cheap GPS Module
+
+`gpsd` incorrectly reports the GPS module as a u-Blox device. The module is actually a GP-02 "GPS+BD" module, which appears to use an Atmel chipset. I'm guessing its firmware misreports what it is by design. Whatever.
+
+I have a problem where everything works great, if you never try to use an actual GPS client (e.g. `cgps`, `gpsmon`, `foxtrotgps`, etc). Prior to doing so, all the timekeeping pieces work great, you can `minicom` into `/dev/ttyS0` on and off all day long, and all is right and well in the world. After connecting with a GPS client, the module must be set to a binary protocol, or its baud rate is adjusted, or something. Regardless, the human-readable data is corrupt except for the "ANTENNA OPEN" NMEA message, which rings clear and true.
+
+I am currently working on debugging this, and writing a solution (read as "a hack") to get things working. Incidentally, if I plug in my u-Blox NEO-F9T RTX Timing module from Sparkfun, I have no issues whatsoever no matter how or how many times I connect and disconnect from the module. Sure, the PPS signal won't correlate with the NEO-F9T's data, since the PPS isn't coming from it, but that's obvious.  
+
+I have my next steps (thank you [Lumo](https://lumo.proton.me)) saved in the [additional_notes.md](./additional_notes.md) file in this repo.
+
 ### RTL-SDR and ADS-B
 
 SDR++ is pre-installed in the base image, above, and that's all great and dandy. I plan on using this device for monitoring ADS-B (1090 MHz), and my setup reflects that with full-time monitoring. (It can be disabled for other SDR use.)

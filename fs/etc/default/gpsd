@@ -2,7 +2,7 @@
 # serial might be /dev/ttyS0
 
 # on raspberry pi uConsole CM4 with raspberry pi os based on debian 12 (bookworm)
-DEVICES="/dev/ttyS0 /dev/pps0"
+DEVICES="/dev/ttyS0:nmea0183 /dev/pps0"
 
 # -n means start without a client connection (i.e. at boot)
 GPSD_OPTIONS="-n"
