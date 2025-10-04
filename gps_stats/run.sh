@@ -14,7 +14,7 @@ read -p "Press Enter to continue, or Ctrl+C to abort."
 
 [[ -f "$PATH_STATS" ]] || { echo "Statistics log not found at $PATH_STATS"; exit 1; }
 
-tail -1000 "$PATH_STATS" > ./chrony_statistics.log
+tail -800 "$PATH_STATS" > ./chrony_statistics.log
 
 NUM_LINES=$(wc -l ./chrony_statistics.log | awk '{print $1}')
 [[ $NUM_LINES -lt 100 ]] && { echo "Not enough statistics in the log. Wait longer."; exit 1; }
