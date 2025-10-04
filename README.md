@@ -20,6 +20,12 @@ The following assumptions are made in this document, and in the shellscript:
 
 If you're using a different base image, your mileage may vary. If you're using a different hardware setup, then you'll probably experience some speed bumps along the way (e.g. device path naming, etc.)
 
+## Use It
+
+```aiignore
+sudo bash -c "$(wget -nv -O - https://github.com/storskegg/uconsole/raw/master/setup.sh)"
+```
+
 ## My Hardware Setup
 
 - [Clockwork PI uConsole CM4](https://www.clockworkpi.com/product-page/uconsole-kit-rpi-cm4-lite) w/ 4104000 CM4 (plans to upgrade to 4108000; CM5 will require special thermal considerations, so I don't think we'll see official support any time soon)
