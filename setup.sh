@@ -6,7 +6,8 @@ echo ""
 # shellcheck disable=SC2162
 read -p "Press ENTER to continue, or CTRL-C to quit."
 
-HOME_USER="/home/$(ls /home)"
+USER_REAL="$(ls /home)" # hacky but it works. assumes fresh image install
+HOME_USER="/home/$USER_REAL"
 
 # NOTE: these are relative. Will reference these relative to / or elsewhere
 P_BOOT_FW="boot/firmware"
@@ -52,6 +53,7 @@ sudo bash -c "echo 'pps-gpio' >> /etc/modules"
 
 # Backups and adjustments (done after apt installs because some of the files don't exist yet)
 git clone https://github.com/storskegg/uconsole.git "$DIR_UCS_GIT"
+sudo chown -R "$USER_REAL":"$USER_REAL" "$DIR_UCS_GIT"
 
 [[ -f $FILE_UCS_FW_CFG_TXT ]] && cp $FILE_UCS_FW_CFG_TXT "$DIR_UCS_FIRMWARE"
 [[ -f $FILE_UCS_FW_CMD_TXT ]] && cp $FILE_UCS_FW_CMD_TXT "$DIR_UCS_FIRMWARE"
