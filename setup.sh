@@ -41,7 +41,7 @@ sudo apt update && sudo apt upgrade
 sudo apt install mc links cmus tmux net-tools build-essential lame git tty-clock flex bison bc libavcodec-extra vim -y
 sudo apt install minicom sdrpp pps-tools gpsd gpsd-clients chrony foxtrotgps -y
 sudo apt install libgpiod-dev libyaml-cpp-dev libbluetooth-dev libusb-1.0-0-dev libi2c-dev openssl libssl-dev libulfius-dev liborcania-dev -y
-sudo apt install libxcb-render0-dev libxcb-shape0-dev libxcb-xfixes0-dev libxkbcommon-dev libssl-dev libudev-dev squashfs-tools -y
+sudo apt install libxcb-render0-dev libxcb-shape0-dev libxcb-xfixes0-dev libxkbcommon-dev libssl-dev libudev-dev squashfs-tools libclang-dev libgtk-3-dev -y --fix-broken
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
