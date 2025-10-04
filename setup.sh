@@ -41,6 +41,11 @@ sudo apt install mc links cmus tmux net-tools build-essential lame git tty-clock
 sudo apt install minicom sdrpp pps-tools gpsd gpsd-clients chrony foxtrotgps -y
 sudo apt install libgpiod-dev libyaml-cpp-dev libbluetooth-dev libusb-1.0-0-dev libi2c-dev openssl libssl-dev libulfius-dev liborcania-dev -y
 
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+# Rust setup
+export PATH="$HOME/.cargo/bin:$PATH"
+
 # Small setup for PPS
 sudo bash -c "echo 'pps-gpio' >> /etc/modules"
 

@@ -23,7 +23,7 @@ If you're using a different base image, your mileage may vary. If you're using a
 ## Use It
 
 ```aiignore
-sudo bash -c "$(wget -nv -O - https://github.com/storskegg/uconsole/raw/master/setup.sh)"
+sudo bash -c "$(wget -nv -O - https://raw.githubusercontent.com/storskegg/uconsole/refs/heads/main/setup.sh)"
 ```
 
 ## My Hardware Setup
