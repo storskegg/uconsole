@@ -42,6 +42,7 @@ sudo apt install mc links cmus tmux net-tools build-essential lame git tty-clock
 sudo apt install minicom sdrpp pps-tools gpsd gpsd-clients chrony foxtrotgps -y
 sudo apt install libgpiod-dev libyaml-cpp-dev libbluetooth-dev libusb-1.0-0-dev libi2c-dev openssl libssl-dev libulfius-dev liborcania-dev -y
 sudo apt install libxcb-render0-dev libxcb-shape0-dev libxcb-xfixes0-dev libxkbcommon-dev libssl-dev libudev-dev squashfs-tools libclang-dev libgtk-3-dev -y --fix-broken
+sudo apt install python3-pandas -y
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
