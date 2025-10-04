@@ -1,0 +1,5 @@
+# Force gpsd to use the generic NMEA driver for the built‑in UART (ttyS0)
+SUBSYSTEM=="tty", KERNEL=="ttyS0", \
+ENV{ID_PATH}=="platform-fe215040.serial", \
+ENV{GPSD_OPTIONS}="nmea0183", \
+SYMLINK+="gps_gp02"
