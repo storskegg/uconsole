@@ -1,3 +1,6 @@
+# The following code is unchanged from its original, which can be found here:
+# https://austinsnerdythings.com/2025/02/14/revisiting-microsecond-accurate-ntp-for-raspberry-pi-with-gps-pps-in-2025/
+# All credit goes to the original author: Austin.
 import pandas as pd
 import matplotlib.pyplot as plt
 from datetime import datetime
