@@ -1,0 +1,13 @@
+[Unit]
+Description=Meshtastic Daemon
+After=network.target
+
+[Service]
+ExecStart=/usr/sbin/meshtasticd
+Restart=always
+User=root
+Group=root
+Type=simple
+
+[Install]
+WantedBy=multi-user.target

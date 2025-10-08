@@ -44,6 +44,9 @@ sudo apt install libgpiod-dev libyaml-cpp-dev libbluetooth-dev libusb-1.0-0-dev 
 sudo apt install libxcb-render0-dev libxcb-shape0-dev libxcb-xfixes0-dev libxkbcommon-dev libssl-dev libudev-dev squashfs-tools libclang-dev libgtk-3-dev -y --fix-broken
 sudo apt install python3-pandas -y
 
+wget https://github.com/meshtastic/firmware/releases/download/v2.5.18.89ebafc/meshtasticd_2.5.18.89ebafc_arm64.deb
+sudo apt install ./meshtasticd_2.5.18.89ebafc_arm64.deb -y --fix-broken --fix-missing-deps
+
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # Rust setup
@@ -74,8 +77,17 @@ sudo perl -i -pe 's/console=(?:serial|ttyS)0,\d{4,6} ?//g' /$P_BOOT_FW/cmdline.t
 sudo bash -c "$(wget -O - https://github.com/wiedehopf/adsb-scripts/raw/master/readsb-install.sh)"
 sudo bash -c "$(wget -nv -O - https://github.com/wiedehopf/tar1090/raw/master/install.sh)"
 
+#sudo systemctl daemon-reload
+
+# Enable meshtasticd service to run meshtastic at boot
+#sudo systemctl enable meshtasticd
+
 # Disable Devterm Printer service from Rex's image; required for meshtasticd
 # sudo systemctl stop devterm-printer.service
 # sudo systemctl disable devterm-printer.service
+
+# Disable readsb service, if you don't want the ADS-B stuff constantly running
+#sudo systemctl stop readsb.service
+#sudo systemctl disable readsb.service
 
 sudo reboot now
